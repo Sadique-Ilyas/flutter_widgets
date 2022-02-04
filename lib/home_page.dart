@@ -1,5 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/Widgets/app_bar.dart';
+import 'package:flutter_widgets/Widgets/baseline.dart';
+import 'package:flutter_widgets/widgets/bottom_sheet_modal.dart';
+import 'package:flutter_widgets/widgets/bottom_sheet_persistent.dart';
+import 'package:flutter_widgets/widgets/button_bar.dart';
+import 'package:flutter_widgets/widgets/card.dart';
+import 'package:flutter_widgets/widgets/column_row.dart';
+import 'package:flutter_widgets/widgets/constrained_box.dart';
+import 'package:flutter_widgets/widgets/container.dart';
+import 'package:flutter_widgets/widgets/divider.dart';
+import 'package:flutter_widgets/widgets/expanded.dart';
+import 'package:flutter_widgets/widgets/expansion_panel.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,10 +26,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter Widgets'),
+        title: const Text('Flutter Widgets'),
         actions: <Widget>[
           IconButton(
-              icon: Icon(Icons.search),
+              icon: const Icon(Icons.search),
               onPressed: () {
                 showSearch(context: context, delegate: ListSearch());
               })
@@ -170,7 +181,7 @@ class ListSearch extends SearchDelegate<String> {
     // Actions for app Bar
     return [
       IconButton(
-          icon: Icon(Icons.clear),
+          icon: const Icon(Icons.clear),
           onPressed: () {
             query = '';
           })
@@ -194,7 +205,7 @@ class ListSearch extends SearchDelegate<String> {
   @override
   Widget buildResults(BuildContext context) {
     // Show results once selected
-    return Center(child: Text('Not Found'));
+    return const Center(child: Text('Not Found'));
   }
 
   @override
@@ -214,12 +225,12 @@ class ListSearch extends SearchDelegate<String> {
           title: RichText(
             text: TextSpan(
                 text: suggestionsList[index].substring(0, query.length),
-                style:
-                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                    color: Colors.black, fontWeight: FontWeight.bold),
                 children: [
                   TextSpan(
                       text: suggestionsList[index].substring(query.length),
-                      style: TextStyle(color: Colors.grey))
+                      style: const TextStyle(color: Colors.grey))
                 ]),
           ),
           onTap: () {
@@ -236,61 +247,63 @@ class ListSearch extends SearchDelegate<String> {
 void nextRoute(BuildContext context, String widget) {
   switch (widget) {
     case 'App Bar':
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => AppBarWidget()));
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const AppBarWidget()));
       break;
-    // case 'Baseline':
-    //   Navigator.push(
-    //       context, MaterialPageRoute(builder: (context) => BaselineWidget()));
-    //   break;
-    // case 'Bottom Sheet (Modal)':
-    //   Navigator.push(context,
-    //       MaterialPageRoute(builder: (context) => BottomSheetModalWidget()));
-    //   break;
-    // case 'Bottom Sheet (Persistent)':
-    //   Navigator.push(
-    //       context,
-    //       MaterialPageRoute(
-    //           builder: (context) => BottomSheetPersistentWidget()));
-    //   break;
-    // case 'Button Bar':
-    //   Navigator.push(
-    //       context, MaterialPageRoute(builder: (context) => ButtonBarWidget()));
-    //   break;
-    // case 'Card':
-    //   Navigator.push(
-    //       context, MaterialPageRoute(builder: (context) => CardWidget()));
-    //   break;
-    // case 'Column and Row':
-    //   Navigator.push(
-    //       context, MaterialPageRoute(builder: (context) => ColumnRowWidget()));
-    //   break;
-    // case 'Constrained Box':
-    //   Navigator.push(context,
-    //       MaterialPageRoute(builder: (context) => ConstrainedBoxWidget()));
-    //   break;
-    // case 'Container':
-    //   Navigator.push(
-    //       context, MaterialPageRoute(builder: (context) => ContainerWidget()));
-    //   break;
+    case 'Baseline':
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const BaselineWidget()));
+      break;
+    case 'Bottom Sheet (Modal)':
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => const BottomSheetModalWidget()));
+      break;
+    case 'Bottom Sheet (Persistent)':
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => const BottomSheetPersistentWidget()));
+      break;
+    case 'Button Bar':
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => ButtonBarWidget()));
+      break;
+    case 'Card':
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => CardWidget()));
+      break;
+    case 'Column and Row':
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => ColumnRowWidget()));
+      break;
+    case 'Constrained Box':
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => ConstrainedBoxWidget()));
+      break;
+    case 'Container':
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => ContainerWidget()));
+      break;
     // case 'Custom Multi Child Layout [Incomplete]':
     //   Navigator.push(
     //       context,
     //       MaterialPageRoute(
     //           builder: (context) => CustomMultiChildLayoutWidget()));
     //   break;
-    // case 'Divider':
-    //   Navigator.push(
-    //       context, MaterialPageRoute(builder: (context) => DividerWidget()));
-    //   break;
-    // case 'Expanded':
-    //   Navigator.push(
-    //       context, MaterialPageRoute(builder: (context) => ExpandedWidget()));
-    //   break;
-    // case 'Expansion Panel':
-    //   Navigator.push(context,
-    //       MaterialPageRoute(builder: (context) => ExpansionPanelWidget()));
-    //   break;
+    case 'Divider':
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => DividerWidget()));
+      break;
+    case 'Expanded':
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => ExpandedWidget()));
+      break;
+    case 'Expansion Panel':
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => ExpansionPanelWidget()));
+      break;
     // case 'Fitted Box':
     //   Navigator.push(
     //       context, MaterialPageRoute(builder: (context) => FittedBoxWidget()));

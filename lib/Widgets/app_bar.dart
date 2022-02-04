@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_widgets/detailed_page.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-List<String> choices = ["Themes", "Sign Out", "Settings"];
-
 class AppBarWidget extends StatefulWidget {
   const AppBarWidget({Key? key}) : super(key: key);
 
@@ -14,9 +12,14 @@ class AppBarWidget extends StatefulWidget {
 }
 
 class AppBarState extends State<AppBarWidget> {
+  String filePath = "lib/Widgets/app_bar.dart";
+  String codeLink = "https://www.google.com/";
+
+  List<String> choices = ["Themes", "Sign Out", "Settings"];
+
   @override
   Widget build(BuildContext context) {
-    return DetailedPage.tabBar(appBar(), output(), sourceCode());
+    return DetailedPage.tabBar(appBar(), output(), filePath, codeLink);
     // return myScaffold();
   }
 
@@ -26,7 +29,7 @@ class AppBarState extends State<AppBarWidget> {
       leading: const Icon(Icons.menu),
       bottom: const TabBar(
         tabs: [
-          Tab(text: 'Output'),
+          Tab(text: 'Widget'),
           Tab(
             text: 'Source Code',
           ),
@@ -65,11 +68,7 @@ class AppBarState extends State<AppBarWidget> {
   }
 
   Widget output() {
-    return const Center(child: Text('App Bar'));
-  }
-
-  Widget sourceCode() {
-    return const Center(child: Text('Source Code'));
+    return const Center(child: Text('App Bar Above'));
   }
 
   void selected(String item) {
