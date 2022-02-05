@@ -12,6 +12,10 @@ import 'package:flutter_widgets/widgets/divider.dart';
 import 'package:flutter_widgets/widgets/expanded.dart';
 import 'package:flutter_widgets/widgets/expansion_panel.dart';
 import 'package:flutter_widgets/widgets/fitted_box.dart';
+import 'package:flutter_widgets/widgets/fractionally_sized_box.dart';
+import 'package:flutter_widgets/widgets/grid_view.dart';
+import 'package:flutter_widgets/widgets/indexed_stack.dart';
+import 'package:flutter_widgets/widgets/stack.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -313,24 +317,24 @@ void nextRoute(BuildContext context, String widget) {
     //   Navigator.push(
     //       context, MaterialPageRoute(builder: (context) => FlowWidget()));
     //   break;
-    // case 'Fractionally Sized Box':
-    //   Navigator.push(
-    //       context,
-    //       MaterialPageRoute(
-    //           builder: (context) => FractionallySizedBoxWidget()));
-    //   break;
-    // case 'Grid View':
-    //   Navigator.push(
-    //       context, MaterialPageRoute(builder: (context) => GridViewWidget()));
-    //   break;
-    // case 'Indexed Stack':
-    //   Navigator.push(context,
-    //       MaterialPageRoute(builder: (context) => IndexedStackWidget()));
-    //   break;
-    // case 'Stack':
-    //   Navigator.push(
-    //       context, MaterialPageRoute(builder: (context) => StackWidget()));
-    //   break;
+    case 'Fractionally Sized Box':
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => FractionallySizedBoxWidget()));
+      break;
+    case 'Grid View':
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => GridViewWidget()));
+      break;
+    case 'Indexed Stack':
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => IndexedStackWidget()));
+      break;
+    case 'Stack':
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => StackWidget()));
+      break;
     // case 'Intrinsic Height':
     //   Navigator.push(context,
     //       MaterialPageRoute(builder: (context) => IntrinsicHeightWidget()));
