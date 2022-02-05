@@ -11,6 +11,7 @@ import 'package:flutter_widgets/widgets/container.dart';
 import 'package:flutter_widgets/widgets/divider.dart';
 import 'package:flutter_widgets/widgets/expanded.dart';
 import 'package:flutter_widgets/widgets/expansion_panel.dart';
+import 'package:flutter_widgets/widgets/fitted_box.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -304,10 +305,10 @@ void nextRoute(BuildContext context, String widget) {
       Navigator.push(context,
           MaterialPageRoute(builder: (context) => ExpansionPanelWidget()));
       break;
-    // case 'Fitted Box':
-    //   Navigator.push(
-    //       context, MaterialPageRoute(builder: (context) => FittedBoxWidget()));
-    //   break;
+    case 'Fitted Box':
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => FittedBoxWidget()));
+      break;
     // case 'Flow [Incomplete]':
     //   Navigator.push(
     //       context, MaterialPageRoute(builder: (context) => FlowWidget()));

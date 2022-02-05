@@ -18,22 +18,23 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: AnimatedSplashScreen(
-        nextScreen: const HomePage(),
-        duration: 3000,
-        curve: Curves.decelerate,
-        splash: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Expanded(
-                flex: 1,
-                child: Image(image: AssetImage("assets/flutter_bird_1.png"))),
-            Text('Flutter')
-          ],
-        ),
-        splashTransition: SplashTransition.fadeTransition,
-        pageTransitionType: PageTransitionType.leftToRight,
-      ),
+      home: HomePage()
+      // home: AnimatedSplashScreen(
+      //   nextScreen: const HomePage(),
+      //   duration: 3000,
+      //   curve: Curves.decelerate,
+      //   splash: Column(
+      //     mainAxisSize: MainAxisSize.min,
+      //     children: [
+      //       Expanded(
+      //           flex: 1,
+      //           child: Image(image: AssetImage("assets/flutter_bird_1.png"))),
+      //       Text('Flutter')
+      //     ],
+      //   ),
+      //   splashTransition: SplashTransition.fadeTransition,
+      //   pageTransitionType: PageTransitionType.leftToRight,
+      // ),
     );
   }
 }

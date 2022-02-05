@@ -39,6 +39,7 @@ dependencies:
 
 dev_dependencies:
   flutter_launcher_icons:
+  flutter_native_splash:
   flutter_test:
     sdk: flutter
 
@@ -46,6 +47,10 @@ flutter_icons:
   android: true
   ios: true
   image_path: "assets/flutter_icon.png"
+
+flutter_native_splash:
+  image: "assets/flutter_bird_2.png"
+  color: "#ffffff"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
